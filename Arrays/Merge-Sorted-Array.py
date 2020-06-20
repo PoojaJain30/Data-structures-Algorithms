@@ -24,4 +24,4 @@ def merge_sorted_arrays1(arr1,arr2):
     return merge_arr+arr1[i:]+arr2[j:]
         
 
-print(merge_sorted_arrays1([0,3,4,31], []))
+print(merge_sorted_arrays1([0,3,4,31], [1,3,6,13,30,31,78]))
