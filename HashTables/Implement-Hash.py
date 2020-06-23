@@ -1,5 +1,5 @@
-#Implement HashTables
-
+#Implement HashTables: Concidering senarios for collision
+# Big O for hash table is O(1) { O(n) in case of collision}
 class ImplementHashTable:
     
     def __init__(self,length):
@@ -10,22 +10,22 @@ class ImplementHashTable:
         
     def __str__(self):
         return str(self.__dict__)
-            
+    # hash function to gereate adress for the keys        
     def _hash(self,key):
         has = 0
         for i in key:
-            #print(i,ord(i))
             has = (has + (ord(i))) % self.length
-            #print(has)
         return has
-            
+
+    # set key value by hashing the key       
     def setKey(self,key,value):
         get_addr = self._hash(key)
         if self.data[get_addr] == 'None':  
             self.data[get_addr] = []
         self.data[get_addr].append([key,value]) 
         self.address.append(get_addr)
-        
+
+    # get the value of given key 
     def getKey(self,key):
         get_addr = self._hash(key)
         current_bucket = self.data[get_addr]
@@ -33,7 +33,8 @@ class ImplementHashTable:
             for i in range(0,len(current_bucket)):
                 if current_bucket[i][0] == key:
                     return current_bucket[i][1]
-            
+
+    #get an array of all the keys      
     def getAllkeys(self):
         keys = []
         for i in range(0,self.length):
