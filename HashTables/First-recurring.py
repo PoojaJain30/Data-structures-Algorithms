@@ -9,6 +9,16 @@
 array1 = [2,3,4,5]
 array = [2,5,5,2,3,5,1,2,4]
 
+#using lists O(n^2) time complexity
+def first_recurring_char1(arr):
+    for i in range(0,len(arr)):
+        for j in range(i+1,len(arr))
+            arr[i] == arr[j]
+            return arr[i]
+    return None 
+
+
+# using hash table incrase in time complexity but need more space
 def first_recurring_char(arr):
     table = {}
     for i in range(0,len(arr)):
@@ -21,3 +31,5 @@ def first_recurring_char(arr):
 
 print(first_recurring_char(array1)) 
 print(first_recurring_char(array)) 
+print(first_recurring_char1(array1)) 
+print(first_recurring_char1(array)) 
