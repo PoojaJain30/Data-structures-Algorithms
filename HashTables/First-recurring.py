@@ -12,7 +12,7 @@ array = [2,5,5,2,3,5,1,2,4]
 #using lists O(n^2) time complexity
 def first_recurring_char1(arr):
     for i in range(0,len(arr)):
-        for j in range(i+1,len(arr))
+        for j in range(i+1,len(arr)):
             arr[i] == arr[j]
             return arr[i]
     return None 
