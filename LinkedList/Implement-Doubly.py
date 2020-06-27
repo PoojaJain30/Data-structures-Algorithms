@@ -1,5 +1,4 @@
 #implement Doubly linked list
-
 class ImplementDoublyLinkedList:
     
     def __init__(self,value):
