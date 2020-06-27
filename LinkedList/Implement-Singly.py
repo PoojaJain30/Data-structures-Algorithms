@@ -84,6 +84,24 @@ class ImplementLinkedList:
         leading_node['next'] = removing_node['next']
         self.length -= 1
         return self.printList()
+
+    #reverse a linked list
+    def reverseList(self):
+        if(self.head['next'] == None):
+            return self.head
+        first = self.head
+        self.tail = self.head
+        second = first['next']
+        
+        while(second != None):
+            temp = second['next']
+            second['next'] = first
+            first = second
+            second = temp
+        
+        self.head['next'] = None
+        self.head = first
+        return self.printList()
     
     
     
@@ -100,4 +118,5 @@ my_list.insertNode(21,19)
 my_list.printList()
 my_list.removeNode(1)
 my_list.printList()
+my_list.reverseList()
 
