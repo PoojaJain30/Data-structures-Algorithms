@@ -11,7 +11,6 @@ def bubble_sort(num):
     print(num)
     
     
-    
 def bubble_sort1(num): 
     count = 0 
     while(count < len(num)):
