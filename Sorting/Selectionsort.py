@@ -1,6 +1,7 @@
 #implement selection sort
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
+
 def selection_sort(num):
     for i in range(len(num)):
         small = i
